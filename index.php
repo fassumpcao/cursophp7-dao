@@ -30,9 +30,41 @@ $search = Usuario::search("fa");
 echo json_encode($search);
 */
 
+/*
 //Login no sistema
 $login = new Usuario();
 $login->login("fassumpcao", "123Mudar2");
 echo $login;
+*/
+
+/*
+//Criar usuario
+$aluno = new Usuario();
+
+$aluno->setDeslogin("Aluno2");
+$aluno->setDessenha("@!un02");
+
+$aluno->insert();
+
+echo $aluno;
+*/
+
+/*
+//Criar usuario utilizando o metodo construtor
+$aluno = new Usuario("alunox", "alunoxxx");
+
+$aluno->insert();
+
+echo $aluno;
+
+*/
+
+//UPDATE
+$user = new Usuario();
+
+$user->loadById(12);
+$user->update("alunox" ,"123456");
+
+echo $user;
 
  ?>
