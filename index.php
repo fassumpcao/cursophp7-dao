@@ -59,12 +59,21 @@ echo $aluno;
 
 */
 
-//UPDATE
+/*
+//UPDATE usuario
 $user = new Usuario();
 
 $user->loadById(12);
 $user->update("alunox" ,"123456");
 
+echo $user;
+*/
+
+
+//Deletar Usuario
+$user = new Usuario();
+$user->loadById(12);
+$user->delete();
 echo $user;
 
  ?>
